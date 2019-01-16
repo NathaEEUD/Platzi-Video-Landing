@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: 'Lato', system-ui;
+  height: 100vh;
+}
+
+#home {
+  display: grid;
+  grid-template-columns: 18% 1fr;
+  grid-template-areas: "sidebar primary";
+}
+
+.home-sidebar {
+  height: 100vh;
+  grid-area: sidebar;
+}
+.sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  background-color: #171929;
+  color: white;
+  padding: 1em;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow: auto;
+}
+.sidebar-logo .logo img {
+  max-width: 100%;
+}
+.sidebar-playlist {
+  overflow: auto;
+}
+.sidebar-playlist .myPlaylist {
+  padding: 0 24px;
+}
+.sidebar-playlist .myPlaylist a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.sidebar-playlist .playlistFriends {
+  padding: 0;
+}
+.sidebar-playlist .playlistFriends .playlistFriends-item {
+  display: flex;
+  margin-bottom: .5em;
+}
+.sidebar-playlist .playlistFriends-item a {
+  text-decoration: none;
+  color: white;
+  font-size: .8em;
+  display: inline-flex;
+  align-items: center;
+}
+.sidebar-playlist .playlistFriends-item img {
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.sidebar-playlist a:hover {
+  text-decoration: underline;
+}
+
+.home-primary {
+  height: 100vh;
+  grid-area: primary;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "search user"
+                       "list list";
+  padding: 10px;
+  box-sizing: border-box;
+}
+.primary-search {
+  grid-area: search;
+  align-self: center;
+}
+.primary-search .search input {
+  width: 100%;
+  background-color: #f0f0f0;
+  font-family: 'Lato';
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: none;
+  box-shadow: 0 0 10px #f0f0f0;
+  box-sizing: border-box;
+}
+
+.primary-user {
+  grid-area: user;
+  justify-self: end;
+}
+.primary-user .user {
+  display: flex;
+}
+.primary-user .user p {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 300;
+}
+.primary-user .user img {
+  width: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.primary-list {
+  grid-area: list;
+  overflow: auto;
+}
+.primaryPlaylist-topic {
+  margin: 25px 0 0;
+  color: #888B8E;
+  font-size: 14px;
+  font-weight: 300;
+}
+.primaryPlaylist-title {
+  margin: 0 0 15px;
+  color: #3F546C;
+  font-size: 20px;
+  font-weight: 400;
+}
+.primaryPlaylist-list {
+  display: flex;
+  overflow: auto;
+}
+.primaryPlaylist-list .primaryPlaylistItem {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.primaryPlaylistItem img {
+  width: 170px;
+  height: 256px;
+  object-fit: cover;
+}
+.primaryPlaylistItem-title {
+  margin: 5px 0;
+  color: #44546B;
+  font-size: 14px;
+  font-weight: normal;
+}
